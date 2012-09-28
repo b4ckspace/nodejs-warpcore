@@ -1,0 +1,30 @@
+{
+    "name": "warpcore",
+    "version": "0.1.0",
+    "author": "schinken <schinken@hackerspace-bamberg.de>",
+    "description": "display current network traffic on our 'warpcore'",
+    "main": "warpcore",
+    "contributors": [
+        {
+            "name": "schinken",
+            "email": "schinken@hackerspace-bamberg.de"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Schinken/nodejs-warpcore.git"
+    },
+    "keywords": [
+        "snmp",
+        "network",
+        "traffic",
+        "leds"
+    ],
+    "dependencies" : {
+        "snmp-traffic":  "https://github.com/Schinken/nodejs-snmp-traffic/tarball/master",
+        "common": "https://github.com/Schinken/nodejs-common/tarball/master"
+    },
+    "engine": {
+        "node": ">=0.6"
+    }
+}
