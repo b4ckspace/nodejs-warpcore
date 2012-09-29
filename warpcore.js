@@ -59,7 +59,7 @@ WarpCore.prototype.enable = function() {
     this.update_interval = setInterval( function() {
         self.emit('update', self.cur_smooth );    
         self.emit('led-update', self.cur_smooth );
-    }, 60 );
+    }, 50 );
 
 };
 
@@ -77,8 +77,10 @@ WarpCore.prototype.led_update = function( pin, cb ) {
 
     this.firmata.pinMode( pin, this.firmata.MODES.PWM );
     this.on('led-update', function( val ) {
-        var tmp = cb(pin, val);
-        self.firmata.analogWrite( pin, tmp );    
+        if( self.enabled ) {
+            var tmp = cb(pin, val);
+            self.firmata.analogWrite( pin, tmp );    
+        }
     });
 
     this.on('disable', function() {
