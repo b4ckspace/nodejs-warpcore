@@ -1,8 +1,7 @@
 var  common     = require('common')
     ,snmp       = require('snmp-traffic')
     ,events     = require('events')
-    ,util       = require('util')
-    ,firmata    = require('firmata');
+    ,util       = require('util');
 
 var WarpCore = function( firmata, snmp_host, kbps_min, kbps_max ) {
     
