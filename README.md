@@ -17,7 +17,6 @@ the node-firmata module is used to set the PWM values
 
 <code>
     var board = new firmata.Board('/dev/ttyACM0',function () {
-
         console.log( "Connected!");
 
         var wc = new WarpCore( board, config.snmp_host );
