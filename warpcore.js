@@ -52,6 +52,10 @@ WarpCore.prototype.setup = function() {
 
 WarpCore.prototype.enable = function() {
  
+    if( this.enabled ) {
+        return;    
+    }
+
     var self = this;
     this.enabled = true;
     this.emit('enable');
