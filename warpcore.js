@@ -21,7 +21,7 @@ var WarpCore = function( firmata, snmp_host, kbps_min, kbps_max ) {
     this.update_interval = false;
 
     this.smooth      = new common.ExponentialSmoothing();
-    this.snmp_client = new snmp.Client( snmp_host );
+    this.snmp_client = new snmp.Client( snmp_host, [1,3,6,1,2,1,2,2,1,10,43] );
 
     this.setup();
 };
